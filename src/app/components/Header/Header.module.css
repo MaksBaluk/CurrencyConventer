@@ -1,0 +1,28 @@
+/* Header.module.css */
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #0070f3;
+}
+
+.title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.loading {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.error {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.rates {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #0070f3;
+}
