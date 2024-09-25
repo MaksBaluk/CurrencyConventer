@@ -2,11 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 import { getRates } from '../../utils/getRates';
-import styles from './Header.module.css'; // Import the CSS module
+import styles from './Header.module.css';
 
-const Header = () => {
-    const [rates, setRates] = useState<{ USD: number; EUR: number } | null>(null);
-    const [loading, setLoading] = useState(true);
+interface Rates {
+    USD: number;
+    EUR: number;
+}
+
+const Header: React.FC = () => {
+    const [rates, setRates] = useState<Rates | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -30,7 +35,7 @@ const Header = () => {
         <div className={styles.header}>
             <h1 className={styles.title}>Currency Converter</h1>
             {loading ? (
-                <h2 className={styles.loading}>Loading...</h2>
+                <h2 className={styles.loading}>Fetching latest rates...</h2>
             ) : error ? (
                 <h2 className={styles.error}>{error}</h2>
             ) : (

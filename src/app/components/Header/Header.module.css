@@ -1,28 +1,70 @@
-/* Header.module.css */
 .header {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f1f3f5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
     text-align: center;
-    border-bottom: 2px solid #0070f3;
+    border-bottom: 4px solid #0070f3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    margin-top: 20px;
 }
 
 .title {
-    font-size: 2rem;
-    color: #333;
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.loading, .error {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    transition: color 0.3s ease;
 }
 
 .loading {
-    font-size: 1.5rem;
-    color: #666;
+    color: #6c757d;
 }
 
 .error {
-    font-size: 1.5rem;
     color: red;
+    font-weight: bold;
 }
 
 .rates {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #0070f3;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: rgba(0, 112, 243, 0.1);
+    border: 1px solid rgba(0, 112, 243, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.rates:hover {
+    background-color: rgba(0, 112, 243, 0.2);
+}
+
+
+@media (max-width: 600px) {
+    .header {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .loading, .error {
+        font-size: 1.2rem;
+    }
+
+    .rates {
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
